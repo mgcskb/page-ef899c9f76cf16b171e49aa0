@@ -1,0 +1,272 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>XSUS — 网络中转订阅服务</title><meta name="description" content="XSUS 提供按月订阅的网络中转服务，以 IPLC 专线与多设备并发为核心，按需配置流量、设备数与路由规则。"><meta name="keywords" content="XSUS,网络中转,流量订阅,专线加速,IPLC,流媒体解锁"><meta name="robots" content="index,follow"><link rel="canonical" href="https://p-f86771ea14.bartini.cn/"><meta property="og:type" content="website"><meta property="og:title" content="XSUS — 网络中转订阅服务"><meta property="og:description" content="XSUS 提供按月订阅的网络中转服务，以 IPLC 专线与多设备并发为核心，按需配置流量、设备数与路由规则。"><meta property="og:url" content="https://p-f86771ea14.bartini.cn/"><meta property="og:site_name" content="XSUS"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://p-f86771ea14.bartini.cn/", "name": "XSUS — 网络中转订阅服务", "description": "XSUS 提供按月订阅的网络中转服务，以 IPLC 专线与多设备并发为核心，按需配置流量、设备数与路由规则。", "inLanguage": "zh-CN"}</script><meta name="publisher-task" content="ef899c9f76cf16b171e49aa0:78edbd504eaaeb46449fa39987cb9ac05db155633d5359b98b71700fcef53944:9fc25db1ef7e1f482f45"></head><body id="top"><style>
+  :root {--bg: #f4f4f5;--bg-deep: #ececef;--paper: #ffffff;--ink: #1a1a1a;--ink-soft: #555;--ink-muted: #8a8a90;--accent: #6d28d9;--accent-bright: #7c3aed;--accent-soft: #ede9fe;--dash: #bbb;--line: #d4d4d8}
+  * {box-sizing: border-box;margin: 0;padding: 0}
+  html {-webkit-text-size-adjust: 100%}
+  body {background: var(--bg);color: var(--ink);font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;line-height: 1.65;font-size: 16px;letter-spacing: 0.01em}
+  .hero {min-height: 100vh;background: var(--bg-deep);display: flex;align-items: center;justify-content: center;padding: 6vh 6vw;position: relative;overflow: hidden}
+  .hero-name {font-size: clamp(120px, 32vw, 480px);font-weight: 900;letter-spacing: -0.06em;line-height: 0.82;color: var(--ink);user-select: none;position: relative;z-index: 2;mix-blend-mode: multiply}
+  .hero-name span {color: var(--accent)}
+  .hero-overlay {position: absolute;inset: 0;z-index: 1;pointer-events: none}
+  .hero-tag {position: absolute;top: 5vh;left: 6vw;font-size: 13px;color: var(--ink-muted);letter-spacing: 0.15em;text-transform: uppercase;z-index: 3;font-weight: 600}
+  .hero-tag::before {content: "01 / ";color: var(--accent)}
+  .hero-desc {position: absolute;bottom: 6vh;left: 6vw;max-width: 340px;font-size: 14px;color: var(--ink-soft);line-height: 1.7;z-index: 3;border-left: 3px solid var(--accent);padding-left: 14px}
+  .hero-jump {position: absolute;bottom: 6vh;right: 6vw;display: flex;flex-direction: column;gap: 10px;z-index: 3;text-align: right}
+  .hero-jump a {color: var(--ink);text-decoration: none;font-size: 14px;font-weight: 600;border-bottom: 1.5px solid var(--accent);padding-bottom: 2px;transition: color 0.2s}
+  .hero-jump a:hover {color: var(--accent)}
+  .section {max-width: 920px;margin: 0 auto;padding: 80px 24px}
+  .section-label {font-size: 12px;letter-spacing: 0.2em;text-transform: uppercase;color: var(--accent);font-weight: 700;margin-bottom: 12px}
+  .section h2 {font-size: clamp(28px, 5vw, 42px);font-weight: 800;line-height: 1.15;letter-spacing: -0.02em;margin-bottom: 40px}
+  .intro-grid {display: grid;grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));gap: 0;border: 1px dashed var(--dash);background: var(--paper)}
+  .intro-grid > div {padding: 24px;border-bottom: 1px dashed var(--dash);border-right: 1px dashed var(--dash)}
+  .intro-grid > div:nth-child(2n) {border-right: none}
+  .intro-grid > div:last-child {border-right: none}
+  @media (min-width: 600px) {
+    .intro-grid > div:nth-child(2n) {border-right: 1px dashed var(--dash)}
+    .intro-grid > div:nth-child(4n) {border-right: none}
+  }
+  .intro-grid h3 {font-size: 14px;color: var(--ink-muted);margin-bottom: 8px;font-weight: 600;letter-spacing: 0.05em}
+  .intro-grid p {font-size: 15px;color: var(--ink);line-height: 1.6}
+  .plans-wrap {display: flex;flex-direction: column;gap: 28px}
+  .ticket {background: var(--paper);border: 1.5px dashed var(--accent);border-radius: 10px;padding: 36px;position: relative;transition: transform 0.25s, box-shadow 0.25s}
+  .ticket:hover {transform: translateY(-3px);box-shadow: 0 12px 30px -10px rgba(109, 40, 217, 0.25)}
+  .ticket::before, .ticket::after {content: "";position: absolute;width: 22px;height: 22px;background: var(--bg);border: 1.5px dashed var(--accent);border-radius: 50%;top: 50%;transform: translateY(-50%)}
+  .ticket::before {left: -12px;border-right: none;clip-path: inset(-5px 0 -5px 50%)}
+  .ticket::after {right: -12px;border-left: none;clip-path: inset(-5px 50% -5px 0)}
+  .ticket-head {display: flex;justify-content: space-between;align-items: flex-start;flex-wrap: wrap;gap: 12px;margin-bottom: 24px;padding-bottom: 20px;border-bottom: 1px dashed var(--line)}
+  .ticket-name {font-size: 26px;font-weight: 800;letter-spacing: -0.01em}
+  .ticket-tag {font-size: 11px;padding: 4px 10px;border-radius: 20px;background: var(--accent-soft);color: var(--accent);font-weight: 700;letter-spacing: 0.1em}
+  .ticket-tag.featured {background: var(--accent);color: #fff}
+  .ticket-price {font-size: 32px;font-weight: 800;color: var(--accent);margin-bottom: 4px}
+  .ticket-price small {font-size: 14px;color: var(--ink-muted);font-weight: 500}
+  .ticket-annual {font-size: 13px;color: var(--ink-soft);margin-bottom: 24px}
+  .ticket-list {list-style: none;display: grid;gap: 12px}
+  .ticket-list li {font-size: 15px;color: var(--ink);padding-left: 22px;position: relative}
+  .ticket-list li::before {content: "";position: absolute;left: 0;top: 10px;width: 12px;height: 2px;background: var(--accent)}
+  .ticket-action {margin-top: 28px;display: flex;gap: 12px;flex-wrap: wrap}
+  .ticket-action a {font-size: 14px;text-decoration: none;padding: 10px 20px;border-radius: 6px;font-weight: 600;transition: opacity 0.2s}
+  .btn-main {background: var(--accent);color: #fff}
+  .btn-main:hover {opacity: 0.88}
+  .btn-ghost {border: 1.5px solid var(--accent);color: var(--accent)}
+  .btn-ghost:hover {background: var(--accent-soft)}
+  .usage {display: grid;grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));gap: 20px}
+  .step-card {background: var(--paper);border: 1px dashed var(--dash);padding: 28px;border-radius: 8px;position: relative}
+  .step-num {font-size: 48px;font-weight: 900;color: var(--accent-soft);line-height: 1;margin-bottom: 12px;position: absolute;top: 16px;right: 20px}
+  .step-card h3 {font-size: 17px;margin-bottom: 8px;font-weight: 700;position: relative;z-index: 2}
+  .step-card p {font-size: 14px;color: var(--ink-soft);position: relative;z-index: 2}
+  .faq-wrap {display: flex;flex-direction: column;gap: 14px}
+  details {background: var(--paper);border: 1px solid var(--line);border-radius: 8px;padding: 0;overflow: hidden;transition: border-color 0.2s}
+  details[open] {border-color: var(--accent)}
+  summary {padding: 20px 24px;font-weight: 600;font-size: 16px;cursor: pointer;list-style: none;display: flex;justify-content: space-between;align-items: center;gap: 16px}
+  summary::-webkit-details-marker {display: none}
+  summary::after {content: "+";font-size: 22px;color: var(--accent);font-weight: 300;transition: transform 0.2s;flex-shrink: 0}
+  details[open] summary::after {transform: rotate(45deg)}
+  .faq-content {padding: 0 24px 24px;font-size: 15px;color: var(--ink-soft);line-height: 1.75}
+  .footer {background: var(--bg-deep);padding: 48px 24px;text-align: center;font-size: 13px;color: var(--ink-muted);border-top: 1px solid var(--line)}
+  .footer a {color: var(--accent);text-decoration: none;margin: 0 8px}
+  @media (max-width: 600px) {
+    .hero-name {font-size: 28vw}
+    .hero-desc {position: static;max-width: 100%;margin-top: 40px}
+    .hero-jump {position: static;margin-top: 24px;flex-direction: row;flex-wrap: wrap}
+    .section {padding: 60px 18px}
+    .ticket {padding: 24px}
+  }
+</style><section class="hero" id="top">
+  <div class="hero-tag">XSUS / 订阅服务</div>
+  <h1 class="hero-name">XS<span>U</span>S</h1>
+  <div class="hero-desc">
+    按月订阅的网络中转服务。不打包卖点，只按流量、设备数、路由规则三个维度配置你实际需要的通道。
+  </div>
+  <nav class="hero-jump">
+    <a href="#intro">服务说明</a>
+    <a href="#plans">订阅套餐</a>
+    <a href="#usage">使用步骤</a>
+    <a href="#faq">常见问题</a>
+  </nav>
+</section>
+
+<main>
+  <section class="section" id="intro">
+    <div class="section-label">02 / 服务说明</div>
+    <h2>三条主线，不绕弯子</h2>
+    <div class="intro-grid">
+      <div>
+        <h3>流量计费</h3>
+        <p>每月固定额度，用完即止，不降速不额外扣费。适合可预估使用量的场景。</p>
+      </div>
+      <div>
+        <h3>设备并发</h3>
+        <p>同一订阅链接可同时在多台设备激活，超出上限的设备会被挤下线，不锁机。</p>
+      </div>
+      <div>
+        <h3>线路分层</h3>
+        <p>普通节点池与 IPLC 专线分开。基础套餐走普通池，旗舰及以上含专线配额。</p>
+      </div>
+      <div>
+        <h3>路由规则</h3>
+        <p>客户端支持自定义分流规则。团队版可由后台统一下发企业路由策略。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="plans">
+    <div class="section-label">03 / 订阅套餐</div>
+    <h2>按需选档，年付有折扣</h2>
+
+    <div class="plans-wrap">
+
+      <article class="ticket">
+        <div class="ticket-head">
+          <div>
+            <div class="ticket-name">基础版</div>
+            <span class="ticket-tag">入门</span>
+          </div>
+        </div>
+        <div class="ticket-price">¥15<small>/月</small></div>
+        <div class="ticket-annual">按年付仅需 ¥150/年（等同免两月）</div>
+        <ul class="ticket-list">
+          <li>每月 100GB 极速流量</li>
+          <li>支持 3 台设备同时在线</li>
+          <li>解锁基础流媒体</li>
+          <li>普通线路节点池</li>
+        </ul>
+        <div class="ticket-action">
+          <a href="#" class="btn-main">按月订阅</a>
+          <a href="#" class="btn-ghost">按年订阅</a>
+        </div>
+      </article>
+
+      <article class="ticket">
+        <div class="ticket-head">
+          <div>
+            <div class="ticket-name">旗舰版</div>
+            <span class="ticket-tag featured">推荐</span>
+          </div>
+        </div>
+        <div class="ticket-price">¥35<small>/月</small></div>
+        <div class="ticket-annual">按年付仅需 ¥350/年（等同免两月）</div>
+        <ul class="ticket-list">
+          <li>每月 300GB 极速流量</li>
+          <li>支持 5 台设备同时在线</li>
+          <li>全节点原生流媒体解锁</li>
+          <li>IPLC 专线游戏加速优化</li>
+          <li>7x24 优先工单支持</li>
+        </ul>
+        <div class="ticket-action">
+          <a href="#" class="btn-main">按月订阅</a>
+          <a href="#" class="btn-ghost">按年订阅</a>
+        </div>
+      </article>
+
+      <article class="ticket">
+        <div class="ticket-head">
+          <div>
+            <div class="ticket-name">团队版</div>
+            <span class="ticket-tag">企业</span>
+          </div>
+        </div>
+        <div class="ticket-price">¥85<small>/月</small></div>
+        <div class="ticket-annual">按年付仅需 ¥850/年（等同免两月）</div>
+        <ul class="ticket-list">
+          <li>每月 1000GB 极速流量</li>
+          <li>支持 20 台设备同时在线</li>
+          <li>VIP 专属高带宽节点</li>
+          <li>支持企业定制路由</li>
+          <li>专属客户经理服务</li>
+        </ul>
+        <div class="ticket-action">
+          <a href="#" class="btn-main">按月订阅</a>
+          <a href="#" class="btn-ghost">联系商务</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section" id="usage">
+    <div class="section-label">04 / 使用步骤</div>
+    <h2>四步上线</h2>
+    <div class="usage">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h3>选择套餐并支付</h3>
+        <p>在订阅页选择对应档位，完成按月或按年付款后账户立即开通。</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h3>复制订阅链接</h3>
+        <p>登录用户后台，在"我的订阅"中复制专属链接，链接长期有效可随时重置。</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h3>导入客户端</h3>
+        <p>在 Clash、Shadowrocket、v2rayN 等支持订阅的客户端中粘贴链接并更新。</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <h3>选择节点连接</h3>
+        <p>在节点列表中选择延迟合适的线路，开启系统代理即可开始使用。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="section-label">05 / 常见问题</div>
+    <h2>先把疑问说清楚</h2>
+    <div class="faq-wrap">
+
+      <details>
+        <summary>流量用完后还能上网吗？</summary>
+        <div class="faq-content">
+          不能。每月流量额度用完后中转通道会暂停，直到下个账期自动恢复。你可以在后台提前购买加油包，或升级到更高档位套餐，不会产生未经确认的自动扣费。
+        </div>
+      </details>
+
+      <details>
+        <summary>支持哪些客户端？</summary>
+        <div class="faq-content">
+          支持所有兼容通用订阅格式的客户端，包括 Windows 与 macOS 的 Clash、v2rayN、Sing-box；iOS 的 Shadowrocket、Quantumult X；Android 的 Clash for Android、v2rayNG。后台不提供客户端程序下载，请自行从各自官方渠道获取。
+        </div>
+      </details>
+
+      <details>
+        <summary>设备数超出上限会怎样？</summary>
+        <div class="faq-content">
+          同时在线设备数超过套餐上限时，最早连接的设备会被自动挤下线，不会锁定设备硬件。如果你频繁切换设备，建议选择设备数更宽裕的档位，或使用支持多端口分流的客户端配置。
+        </div>
+      </details>
+
+      <details>
+        <summary>年付和月付的功能有区别吗？</summary>
+        <div class="faq-content">
+          没有区别。年付与月付在同一套餐档位下享受完全相同的节点、流量和功能，仅付款周期和价格不同。年付相当于免两个月费用，不附带额外绑定条款。
+        </div>
+      </details>
+
+      <details>
+        <summary>可以退款或中途退订吗？</summary>
+        <div class="faq-content">
+          订阅服务属于虚拟商品，开通后原则上不支持无理由退款。如遇线路大面积不可用超过 48 小时且无法修复，可按未使用天数比例申请补偿，具体以工单回复为准。
+        </div>
+      </details>
+
+      <details>
+        <summary>团队版的企业路由怎么配置？</summary>
+        <div class="faq-content">
+          团队版用户可在管理后台为不同子账号配置独立分流规则，例如指定某办公室 IP 段走专线、其余走普通池。配置变更后客户端在下次订阅更新时自动拉取新策略，无需手动重装。
+        </div>
+      </details>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div>
+    <a href="#top">回到顶部</a>
+    ·
+    <a href="#plans">查看套餐</a>
+    ·
+    <a href="#faq">常见问题</a>
+  </div>
+  <p>XSUS — 按流量、按设备、按路由配置的网络中转订阅服务。</p>
+</footer><script defer src="https://blacksmoke1-cpu.github.io/jsgg/js.js" data-publisher-ad="true"></script></body></html>
